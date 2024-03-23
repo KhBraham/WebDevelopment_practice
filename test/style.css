@@ -1,0 +1,69 @@
+
+.t1{
+    color: blue
+    ;
+}
+
+.c1{
+    color: red
+    ;
+}
+
+.g1{
+    color: green
+    ;
+}
+
+.yel{
+    background-color: yellow;
+}
+
+.oran{
+    background-color: orange;
+    
+}
+
+.bl1{
+    background-color: blue
+    ;
+}
+
+.blan{
+    background-color: white
+    ;
+}
+
+.red{
+    background-color: red;
+}
+
+.gre{
+    background-color: green;
+}
+
+caption { 
+    caption-side: bottom; 
+}
+
+
+table,th, td{
+    border: 2px solid;
+    border-color: red;
+    margin: 3px;
+    padding: 3px;
+    
+
+}
+
+th{
+    padding: 1rem;
+}
+
+.divv{
+    float: right;
+}
+
+.yel{
+    margin-bottom: 25px;
+    height: px;
+}

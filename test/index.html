@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="">
+            <fieldset>
+                <legend class="t1">Informations Personnelles :</legend>
+                    <label for="nom">Nom(s) <font color="red">*</font> :</label>
+                    <input type="text" name="nom" id="nom" required placeholder="Saisir Nom">
+                    <br><br>
+                    <label for="prenom" >Prénom(s) <font color="red">*</font>:</label>
+                    <input type="text" name="prenom" id="prenom" required placeholder="Saisir Prénom">
+                    <br><br>
+                    <label for="email" >Email <font color="red">*</font>:</label>
+                    <input type="email" name="email" id="email" required placeholder="Saisir Email valide">
+                <br><br>
+                <fieldset>
+                    <legend class="t1">Naissance :</legend>
+                    <label for="date" >Date <font color="red">*</font>:</label>
+                    <input type="date" name="date" id="date" required>
+                    <br><br>
+                    <label for="ville">Ville <font color="red">*</font>:</label>
+                    <select name="ville" id="ville" required>
+                        <option value=""></option>
+                        <option value="CASABLANCA">CASABLANCA</option>
+                        <option value="RABAT">RABAT</option>
+                        <option value="TANGER">TANGER</option>
+                        <option value="DAKHLA">DAKHLA</option>
+                        <option value="AUTRE">AUTRE</option>
+                    </select>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend class="c1">Coordonnées :</legend>
+                    <label for="tel">Telephone <font color="red">*</font>:</label>
+                    <input type="tel" name="tel" id="tel" minlength="10" maxlength="10" required placeholder="10 chiffres">
+                    <br><br>
+                    <label for="Adresse">Adresse <font color="red">*</font>:</label>
+                    <textarea name="" id="" cols="30" rows="3" required></textarea>
+                    <br><br>
+                    <label for="ville">Ville <font color="red">*</font>:</label>
+                    <select name="ville" id="ville" required>
+                        <option value=""></option>
+                        <option value="CASABLANCA">CASABLANCA</option>
+                        <option value="RABAT">RABAT</option>
+                        <option value="TANGER">TANGER</option>
+                        <option value="DAKHLA">DAKHLA</option>
+                        <option value="AUTRE">AUTRE</option>
+                    </select>
+                    <br><br>
+                    <label for="text">Code Postal :</label>
+                    <input type="number" name="text" id="text" placeholder="5 chiffres Max" maxlength="5">
+                </fieldset>
+                <br>
+                <fieldset class="yel">
+                    <legend class="g1">Centre d'interet : (cocher au moins 2 choix)</legend>
+                    <br>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Science</label>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Litterature</label>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Théatre</label><br><br>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Cuisine</label>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Histoire</label>
+                    <input type="checkbox" name="checkbox" id="checkbox"  value="Science">
+                    <label for="">Sport</label>
+                </fieldset>
+                <fieldset>
+                    <legend class="c1">Tableaux en HTML :</legend>
+                    <p>Le tableau suivant doit contenir un emplacement de 5 pour le spacing et de 7</p>
+                    <table  class="oran" border="5">
+                        <caption>Liste des Coordonnées</caption>
+                        
+                            <tr>
+                                
+                                <td align="center" colspan="3"><b>champ1-champ2-champ3</b></td>
+                                <td align="center"><b>champ4</b></td>
+                                
+                            </tr>
+                        <tbody>
+                            <tr >
+                                <td class="bl1">Ben Abderrahmane</td>
+                                <td class="yel">Mohammed Reda</td>
+                                <td align="center" class="bl1" >VAdr1</td>
+                                <td  class="bl1">Vville1</td>
+                            </tr>
+                            <tr aria-colspan="2">
+                                <td class="yel" rowspan="2">Ben Abdellah</td>
+                                <td class="gre" >Zakaria</td>
+                                <td class="blan" align="end" valign="bottom" rowspan="2" colspan="2">meme adresse pour</td>
+                                
+                            </tr>
+                            <tr aria-colspan="2">
+                                <td align="right">Zakia</td>
+                            </tr>
+                            <tr>
+                                <td>Ben Elmoundini</td>
+                                <td>Bahae Eddine</td>
+                                <td class="red" colspan="2">Aucune valeur Saisie</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <div><font color="red">*</font><u><b>champs obligatoires</b> </u> </div>
+            <br><br>
+            <div class="divv" >
+                <input type="submit">
+                <input type="reset">
+            </div>
+            </fieldset>
+        </form>
+        
+        
+        
+    </div>
+</body>
+</html>

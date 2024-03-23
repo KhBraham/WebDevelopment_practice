@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Étudiant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulaire Étudiant</h1>
+    <form action="insert.php" method="post">
+        <label for="cne">CNE :</label>
+        <input type="number" id="cne" name="cne" required><br><br>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" maxlength="25" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" maxlength="25" required><br><br>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="dateInscription">Date d'inscription :</label>
+        <input type="datetime-local" id="dateInscription" name="dateInscription" required><br><br>
+
+        <label for="adresse">Adresse :</label>
+        <textarea id="adresse" name="adresse" rows="4" cols="50"></textarea><br><br>
+
+        <label for="sexe">Sexe :</label>
+        <select id="sexe" name="sexe" required>
+            <option value="M">Masculin</option>
+            <option value="F">Féminin</option>
+        </select><br><br>
+
+        <label for="moyenne">Moyenne :</label>
+        <input type="number" id="moyenne" name="moyenne" step="0.01" required><br><br>
+
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Réinitialiser">
+        
+    </form>
+    <LAbel>If u want to modify registration : </LAbel>
+    <a href="display_etudiant.php" target="_parent"><button>Modifier</button></a>
+</body>
+</html>
