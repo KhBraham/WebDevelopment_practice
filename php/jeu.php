@@ -13,6 +13,7 @@
 //     }
 //     $value = $_GET['chiffre'];
 // }
+require_once 'function.php';
 $parfums = [
     'Fraise' => 4,
     'Chocolat' => 5,
@@ -26,36 +27,46 @@ $supplements = [
     'Pépites de chocolat' => 1,
     'Chantilly' => 0.5
 ];
+$tilte = "Composer votre glace";
 require 'header.php';
 ?>
 
 <main class="flex-shrink-0">
     <div class="container">
+        <h1>Composer votre glace</h1>
         <form action="/php/jeu.php" method="get">
             <div class="form-group">
                 <!-- <input type="number" class="form-control" name="chiffre" placeholder="entre 0 et 1000" value="<?= $value ?>"> -->
-                <input type="checkbox" name="parfum[]" value="fraise" id="fraise">
-                <label for="fraise">Fraise</label><br>
-                <input type="checkbox" name="parfum[]" value="vanille" id="vanille">
-                <label for="vanille">vanille</label><br>
-                <input type="checkbox" name="parfum[]" value="chocolat" id="chocolat">
-                <label for="chocolat">chocolat</label>
+                <h2>Choisissez votre parfum</h2>
+                <?php foreach($parfums as $parfum => $prix): ?>
+                    <div class="checkbox">
+                        <label>
+                            <?= checkbox('parfum', $parfum, $_GET) ?> 
+                            <?= $parfum ?> - <?= $prix ?> £
+                        </label>
+                    </div>
+                <?php endforeach ?>
+                <h2>Choisissez votre cornet</h2>
+                <?php foreach($cornets as $cornet => $prix): ?>
+                    <div class="radio">
+                        <label>
+                            <?= radio('cornet', $cornet, $_GET) ?> 
+                            <?= $cornet ?> - <?= $prix ?> £
+                        </label>
+                    </div>
+                <?php endforeach ?>
+                <h2>Choisissez votre supplement</h2>
+                <?php foreach($supplements as $supplement => $prix): ?>
+                    <div class="checkbox">
+                        <label>
+                            <?= checkbox('supplement', $supplement, $_GET) ?> 
+                            <?= $supplement ?> - <?= $prix ?> £
+                        </label>
+                    </div>
+                <?php endforeach ?>
             </div>
-            <input type="text" name="demo[]">
-            <input type="text" name="demo[]">
-            <br>
-            <!-- <div class="mg-10">
-                <?php if ($erreur) :?> 
-                        <div class="alert alert-danger">
-                            <?= $erreur ?>
-                        </div>
-                <?php elseif ($succes) : ?>
-                        <div class="alert alert-success">
-                            <?= $succes ?>
-                        </div>
-                <?php endif ?>
-            </div> -->
-            <button type="submit" class="btn btn-primary">Deviner</button>
+            
+            <button type="submit" class="btn btn-primary">Composer ma glace</button>
         </form>
     </div>
     <br>
