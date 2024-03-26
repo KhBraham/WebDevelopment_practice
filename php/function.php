@@ -21,4 +21,9 @@ function radio (string $name, string $value, array $data): string
     <input type="radio" name="{$name}" value="{$value}" $attributes>
 html;
 }
+function dump($var) {
+    echo '<pre>';
+    var_dump($var);
+    echo '</pre>';
+}
 ?>
