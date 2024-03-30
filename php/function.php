@@ -26,4 +26,26 @@ function dump($var) {
     var_dump($var);
     echo '</pre>';
 }
+
+function creneaux_html (array $creneaux) {
+    if(empty($creneaux)){
+        return 'Fermé';
+    }
+    $phrases = [];
+    foreach ($creneaux as $creneau) {
+        $phrases[] = "<strong>{$creneau[0]}h</strong> / <strong>{$creneau[1]}h</strong>";
+    }
+    return 'Ouvert ' . implode(' et ', $phrases);
+}
+
+function in_creneux (int $heure, array $creneaux): bool{
+    foreach ($creneaux as $creneau) {
+        $debut = $creneau[0];
+        $fin = $creneau[1];
+        if ($heure >= $debut && $heure <= $fin) {
+            return true;
+        }
+    }
+    return false;
+}
 ?>
