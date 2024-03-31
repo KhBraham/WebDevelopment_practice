@@ -4,8 +4,9 @@
     require_once 'config.php';
     require_once 'function.php';
     date_default_timezone_set('Africa/Casablanca');
-    $heure = (int)date('G');
-    $creneaux = CRENEAUX[date('N') - 1];
+    $heure = (int)($_GET['heure'] ?? (int)date('G'));
+    $jour = (int)($_GET['jour'] ?? date('N') - 1);
+    $creneaux = CRENEAUX[$jour];
     $ouvert = in_creneux($heure, $creneaux);
     $color = ($ouvert)? 'green' : 'red';
     
@@ -22,16 +23,26 @@
                 <h2>Horaire d'ouvertures</h2>
                 <?php if ($ouvert): ?>
                     <div class="alert alert-success">
-                        Le magasin est ouvert
+                        Le magasin sera ouvert
                     </div>
                 <?php else :?>
                     <div class="alert alert-danger">
-                        Le magasin est fermé
+                        Le magasin sera fermé
                     </div>
                 <?php endif; ?>
+                <form action="" method="get">
+                    <div class="form-group">
+                        <?= select('jour', $jour, JOURS) ?>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="heure" value="<?= $heure ?>">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Voir si le magasin est ouvert</button>
+                </form>
+                
                 <ul>
                     <?php foreach(JOURS as $key => $jour) :?>
-                        <li <?php if ($key + 1 === (int)date('N')): ?> style="color:<?= $color; ?>"<?php endif ?>>
+                        <li>
                             <strong><?= $jour . ' : ' ?></strong>
                             <?= creneaux_html(CRENEAUX[$key])?>
                         </li>

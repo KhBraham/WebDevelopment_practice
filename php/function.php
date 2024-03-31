@@ -21,6 +21,16 @@ function radio (string $name, string $value, array $data): string
     <input type="radio" name="{$name}" value="{$value}" $attributes>
 html;
 }
+
+function select (string $name, $value,array $options): string  {
+    $html_options = [];
+    foreach ($options as $k => $option){
+        $attributes = ($k == $value)? 'selected' : '';
+        $html_options[] = "<option value='$k' $attributes>$option</option>";
+    }
+    return "<select name='jour' class='form-control'>" . implode($html_options) . "</select>";
+}
+
 function dump($var) {
     echo '<pre>';
     var_dump($var);
