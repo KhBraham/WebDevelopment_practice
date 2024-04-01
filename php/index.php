@@ -1,7 +1,7 @@
 <?php
     $title = "Page d'accueil";
     $nav = 'index';
-    require 'header.php';
+    require 'element/header.php';
 ?>
 <!-- <pre>
     <?php
@@ -17,5 +17,5 @@
 </main>
 
 <?php
-    require 'footer.php';
+    require 'element/footer.php';
 ?>

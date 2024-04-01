@@ -55,7 +55,7 @@ foreach(['parfum', 'supplement', 'cornet'] as $name) {
 }
 
 setcookie('pseudo', "sekkate", time() + 300000);
-require 'header.php';
+require 'element/header.php';
 ?>
 
 <main class="flex-shrink-0">
@@ -125,4 +125,4 @@ require 'header.php';
 </main>
 
 
-<?php require 'footer.php' ?>
+<?php require 'element/footer.php' ?>

@@ -15,6 +15,6 @@ html;
 }
 ?>
 <?= nav_item('/php/index.php', 'Accueil', $class) ?>
-<?= nav_item('/php/blog.php', 'Blog', $class) ?>
 <?= nav_item('/php/contact.php', 'Contact', $class) ?>
 <?= nav_item('/php/jeu.php', 'Jeu', $class) ?>
+<?= nav_item('/php/newsletter.php', 'newsletter', $class) ?>

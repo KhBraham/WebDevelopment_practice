@@ -1,7 +1,7 @@
 <?php
     $tiltle = 'Nous contacter';
     $nav = 'contact';
-    require_once 'config.php';
+    require_once 'data/config.php';
     require_once 'function.php';
     date_default_timezone_set('Africa/Casablanca');
     $heure = (int)($_GET['heure'] ?? (int)date('G'));
@@ -10,7 +10,7 @@
     $ouvert = in_creneux($heure, $creneaux);
     $color = ($ouvert)? 'green' : 'red';
     
-    require 'header.php';
+    require 'element/header.php';
 ?>
 <main class="flex-shrink-0">
     <div class="container">
@@ -34,12 +34,14 @@
                     <div class="form-group">
                         <?= select('jour', $jour, JOURS) ?>
                     </div>
+                    <br>
                     <div class="form-group">
                         <input type="number" class="form-control" name="heure" value="<?= $heure ?>">
                     </div>
+                    <br>
                     <button type="submit" class="btn btn-primary">Voir si le magasin est ouvert</button>
                 </form>
-                
+                <br>
                 <ul>
                     <?php foreach(JOURS as $key => $jour) :?>
                         <li>
@@ -54,5 +56,5 @@
 </main>
 
 <?php
-    require 'footer.php';
+    require 'element/footer.php';
 ?>
