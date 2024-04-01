@@ -18,3 +18,4 @@ html;
 <?= nav_item('/php/contact.php', 'Contact', $class) ?>
 <?= nav_item('/php/jeu.php', 'Jeu', $class) ?>
 <?= nav_item('/php/newsletter.php', 'newsletter', $class) ?>
+<?= nav_item('/php/nsfw.php', 'nsfw', $class) ?>

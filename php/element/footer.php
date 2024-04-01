@@ -2,7 +2,8 @@
 
         <footer class="footer mt-auto py-3 bg-body-tertiary">
             <div class="container">
-                <div class="row">
+                <div class="col">
+                    <div class="row">
                     <form action="/php/newsletter.php" method="post" class="form-inline">
                         <div class="form-group">
                             <input type="email" name="email" placeholder="Entrer votre email" required class="form-control">
@@ -10,16 +11,23 @@
                         
                         <button style="margin: 10px 0;" type="submit" class="btn btn-primary">S'inscrire</button>
                     </form>
-                    <h5>Navigation</h5>
-                    <span class="text-body-secondary">
-                        <ul class="list-unstyled text-small">
-                            <?php 
-                                $class = '';
-                                require 'menu.php'; 
-                            ?>
-                        </ul>
-                    </span>                    
                 </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <h5>Navigation</h5>
+                        <span class="text-body-secondary">
+                            <ul class="list-unstyled text-small">
+                                <?php 
+                                    $class = '';
+                                    require 'menu.php'; 
+                                ?>
+                            </ul>
+                        </span> 
+                    </div>
+                </div>
+                    
             </div> 
 
         </footer>
