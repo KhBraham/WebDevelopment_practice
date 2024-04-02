@@ -3,6 +3,11 @@
         <footer class="footer mt-auto py-3 bg-body-tertiary">
             <div class="container">
                 <div class="col">
+                    <?php
+                        require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
+                        ajouter_vue();
+                    ?>
+                    <p>Il y a <?= nombre_vues() ?> visites sur le site</p>
                     <div class="row">
                     <form action="/php/newsletter.php" method="post" class="form-inline">
                         <div class="form-group">
