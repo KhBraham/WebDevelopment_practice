@@ -1,0 +1,18 @@
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('hhh.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+form{
+    display: grid;
+    padding: 2em;
+}
+form input option{
+    margin: 0.2em;
+    padding: 0.2em;
+}

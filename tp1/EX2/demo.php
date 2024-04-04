@@ -4,7 +4,7 @@ function longueurMax($tab) {
     $max = strlen($tab[0]);
     foreach ($tab as $mot) {
         $length = strlen($mot);
-        if ($length >= $max) {
+        if ($length > $max) {
             $element = $mot;
             $max = $length; // Mettre à jour la longueur maximale trouvée
         }

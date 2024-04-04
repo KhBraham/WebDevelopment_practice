@@ -1,11 +1,11 @@
 <?php
 function age($dateNaissance) {
     // Créer un objet DateTime avec la date de naissance fournie
-    $dateNaissance = date_create($dateNaissance);
-    
+    $dateNaissance = date_create_from_format('d/m/Y', $dateNaissance);
+    echo var_dump($dateNaissance);
     // Obtenir la date actuelle
-    $dateActuelle = new DateTime();
-
+    $dateActuelle = date_create(date('d-m-Y'));
+    echo var_dump($dateActuelle);
     // Calculer la différence entre la date actuelle et la date de naissance
     $difference = date_diff($dateNaissance, $dateActuelle);
     echo  
@@ -21,10 +21,10 @@ function age($dateNaissance) {
 }
 
 // Exemple d'utilisation
-$dateNaissance = "2000-05-15"; // Date de naissance au format "YYYY-MM-DD"
+$dateNaissance = "02/12/2007"; // Date de naissance au format "YYYY-MM-DD"
 if (age($dateNaissance)) {
-    echo "La personne est majeure.";
+    echo ", La personne est majeure.";
 } else {
-    echo "La personne est mineure.";
+    echo ", La personne est mineure.";
 }
 ?>
