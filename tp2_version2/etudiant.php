@@ -1,6 +1,4 @@
 <?php
-
-die();
 try {
     $db = new PDO('mysql:host=localhost;dbname=ensam-casa;charset=utf8', 'root', '');
     echo "<div class='title'><h2>la connexion a ete etablie!</h2></div>";
@@ -50,7 +48,7 @@ if (isset($_POST['delete'])) {
 
 if (isset($_POST['update'])) {
     $sql = "UPDATE etudiant SET Nom = ?, Prenom = ?, Age = ?, DateInscription = ?, Adresse = ?, Sexe = ?, Moyenne = ? WHERE CNE = ?";
-    $cne = $_POST['cne']; // Use consistent variable name
+    $cne = $_POST['cne'];
     $newNom = $_POST['nom'];
     $newPrenom = $_POST['prenom'];
     $newAge = $_POST['age'];
@@ -60,7 +58,7 @@ if (isset($_POST['update'])) {
     $newMoyenne = $_POST['moyenne'];
     try {
         $stmt = $db->prepare($sql);
-        $stmt->bindParam(8, $cne); // Use consistent variable name
+        $stmt->bindParam(8, $cne);
         $stmt->bindParam(1, $newNom);
         $stmt->bindParam(2, $newPrenom);
         $stmt->bindParam(3, $newAge);
