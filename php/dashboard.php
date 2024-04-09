@@ -1,4 +1,6 @@
 <?php
+require 'functions/auth.php';
+forcer_utilisateur_connecte();
 $tilte = 'Votre visites';
 $nav = 'dashboard';
 require_once 'functions/compteur.php';
