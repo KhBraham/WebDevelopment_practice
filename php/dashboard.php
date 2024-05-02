@@ -1,5 +1,5 @@
 <?php
-require 'functions/auth.php';
+require_once 'functions/auth.php';
 forcer_utilisateur_connecte();
 $tilte = 'Votre visites';
 $nav = 'dashboard';
@@ -27,7 +27,7 @@ $mois = array(
     11 => "Novembre",
     12 => "Décembre"
 );
-require 'element/header.php';
+require_once 'element/header.php';
 ?>
 <div class="row">
     <div class="col-md-4">
